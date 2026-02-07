@@ -63,13 +63,12 @@ def n_controlled_z(qc, qubits):
 
 
 def main():
-    targets=['0101']  # Target states to search for
+    targets=['0101', '1111']  # Target states to search for
     #targets=['101', '110']  # Example with multiple target states
     #targets=['11']
 
     # Connect to IBM Quantum
     # Note: If you don't have an IBM account configured, this may fail.
-    # You can replace this with backend = AerSimulator() for local testing.
     try:
         service = QiskitRuntimeService(channel="ibm_quantum_platform")
         #backend = service.least_busy(operational=True, simulator=False)

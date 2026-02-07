@@ -18,32 +18,36 @@ To run this project, you need Python installed along with the following librarie
 - `numpy`
 
 ## Installation
-You can install the required dependencies using pip:
+You can install the package directly from PyPI:
+```bash
+pip install grover-visualizer
+```
+
+Alternatively, you can install the required dependencies manually:
 ```bash
 pip install qiskit qiskit-aer qiskit-ibm-runtime matplotlib numpy
 ```
 
 ## Usage
-Run the main script to start the simulation and visualization:
+After installation, you can run the visualization using:
 ```bash
-python main.py
+python -m grover_visualizer.grover
 ```
 
 ### Configuration
-In `main.py`, you can modify the `targets` list to change the state(s) you are searching for:
+In `grover_visualizer/grover.py`, you can modify the `targets` list to change the state(s) you are searching for:
 ```python
 targets = ['0101']  # Change this to any bitstring of your choice
 ```
 
 ## Project Structure
-- `main.py`: The core script that constructs the quantum circuit, runs the simulation, and manages the algorithm's iterations.
-- `animation.py`: Contains the logic for the Matplotlib-based animation of quantum states.
-- `Quantum Testing.iml`: IntelliJ IDEA project configuration file.
+- `grover_visualizer/grover.py`: The core script that constructs the quantum circuit, runs the simulation, and manages the algorithm's iterations.
+- `grover_visualizer/animation.py`: Contains the logic for the Matplotlib-based animation of quantum states.
 
 ## How it Works
 1. **Initialization**: The circuit starts by applying Hadamard gates to all qubits, creating a uniform superposition of all possible states.
 2. **Oracle**: A phase-flip oracle marks the target state(s) by reversing their signs.
 3. **Diffusion (Inversion about the Mean)**: This operator amplifies the probability amplitude of the marked state while decreasing the amplitudes of other states.
 4. **Repetition**: The Oracle and Diffusion steps are repeated for the optimal number of times ($\approx \frac{\pi}{4}\sqrt{2^n/M}$).
-5. **Animation**: The `animation.py` module tracks the statevector after each iteration to visualize how the probability of the target state grows.
+5. **Animation**: The `grover_visualizer/animation.py` module tracks the statevector after each iteration to visualize how the probability of the target state grows.
 6. **Measurement**: Finally, the qubits are measured, and the results are displayed as a histogram of counts.
