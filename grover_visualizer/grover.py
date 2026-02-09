@@ -5,8 +5,7 @@ from qiskit.circuit.library import ZGate
 from qiskit.quantum_info import Statevector
 from qiskit_aer import AerSimulator
 from qiskit_ibm_runtime import QiskitRuntimeService, SamplerV2 as Sampler
-
-import animation
+from . import animation
 
 
 def initialize_s(qc, qubits):
