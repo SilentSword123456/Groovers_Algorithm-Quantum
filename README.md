@@ -10,12 +10,12 @@ This project implements Grover's Algorithm using Qiskit and provides an animatio
 - **Optimal Iteration Calculation**: Automatically determines the number of iterations needed based on the number of qubits and target states.
 
 ## Prerequisites
-To run this project, you need Python installed along with the following libraries:
-- `qiskit`
-- `qiskit-aer`
-- `qiskit-ibm-runtime`
-- `matplotlib`
-- `numpy`
+To run this project, you need Python 3.8+ installed along with the following libraries:
+- `qiskit>=1.0.0`
+- `qiskit-aer>=0.13.0`
+- `qiskit-ibm-runtime>=0.17.0`
+- `matplotlib>=3.7.0`
+- `numpy>=1.24.0`
 
 ## Installation
 You can install the package directly from PyPI:
@@ -23,7 +23,12 @@ You can install the package directly from PyPI:
 pip install grover-visualizer
 ```
 
-Alternatively, you can install the required dependencies manually:
+You can install the dependencies using `requirements.txt`:
+```bash
+pip install -r requirements.txt
+```
+
+Or install the required dependencies manually:
 ```bash
 pip install qiskit qiskit-aer qiskit-ibm-runtime matplotlib numpy
 ```
