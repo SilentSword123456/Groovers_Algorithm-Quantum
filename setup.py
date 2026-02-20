@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
     name="grover-visualizer",
-    version="0.1.2",
+    version="0.1.4",
     packages=find_packages(),
     install_requires=[
         "qiskit>=1.0.0",
@@ -14,7 +14,7 @@ setup(
         "matplotlib>=3.7.0",
         "numpy>=1.24.0"
     ],
-    author="Silent Sword",
+    author="SilentSword",
     description="Visualize Grover's Algorithm with quantum state animations",
     long_description=long_description,
     long_description_content_type="text/markdown",
