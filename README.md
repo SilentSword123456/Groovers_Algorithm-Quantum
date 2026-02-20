@@ -23,15 +23,13 @@ You can install the package directly from PyPI:
 pip install grover-visualizer
 ```
 
-You can install the dependencies using `requirements.txt`:
+Or you can clone the reposetory and isntall the dependencies with:
 ```bash
+gh repo clone SilentSword123456/Groovers_Algorithm-Quantum
+cd Groovers_Algorithm-Quantum
 pip install -r requirements.txt
 ```
 
-Or install the required dependencies manually:
-```bash
-pip install qiskit qiskit-aer qiskit-ibm-runtime matplotlib numpy
-```
 
 ## Usage
 After installation, you can run the visualization using:
